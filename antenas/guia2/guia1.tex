@@ -8,6 +8,7 @@
 \usepackage{subfigure}
 \usepackage{multicol}
 \usepackage{hyperref}
+\usepackage{framed}
 \usepackage[T1]{fontenc}
 \usepackage[utf8] {inputenc} %tildes
 
@@ -46,22 +47,19 @@
 \newcommand{\profesor}{Leonardo Rodríguez Mújica}
 \newcommand{\correo}{lrodriguez@mail.unicundi.edu.co}
 \newcommand{\nucleotematico}{Antenas}
-\newcommand{\codigo}{}
-\newcommand{\monitor}{Andrea Carolina Garay Mosquera}
-\newcommand{\cormon}{a.cgaray@hotmail.com}
+\newcommand{\codigo}{622007741}
+\newcommand{\monitor}{}
+\newcommand{\cormon}{}
 
 \newcommand{\marco}[2]
 {
-\begin{center}
 {\fboxsep 10pt
-\fcolorbox{black}{white}{
-\begin{minipage}[t]{16cm}
+    \begin{framed}
 
 \section{#1}
 #2
-\end{minipage}
-}}
-\end{center}
+\end{framed}
+}
 }
 
 \newcommand{\continua}[1] { 
@@ -150,8 +148,9 @@ www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co
 \objetivos{
 
 \begin{itemize}
-\item  Diseñar antena Yagi utilizando los software (YagiModel y XNEC2C)
-\item  Implementar antena Yagi
+\item  Diseñar antena Yagi para una emisora universitaria de la
+    ciudad de Bogotá utilizando los software (YagiModel y XNEC2C)
+\item  Implementar y probar la antena Yagi
 \item Analizar los  diseños con los dos programas (YagiModel y xnec2c)
 \end{itemize}
 }
@@ -160,10 +159,9 @@ www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co
 \materiales{
 
 \begin{enumerate}
-  \item Alambre de cobre
-  \item Conector N hembra para chasis
-  \item Pig tail (cola de cerdo)
-  \item Tarjeta de red (150n)
+  \item Tubos de aluminio
+  \item Cable coaxial
+  \item XNEC2c y YagiModeler    
 \end{enumerate}
 }
 
@@ -190,26 +188,77 @@ www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co
 
 \begin{enumerate}
 
+%% Diseño antena emisora universitaria
+
+    \item Partiendo de la emisora universitaria que le correspondió y del
+        dipolo diseñado en la práctica pasada diseñe una antena yagi cuyo
+        objetivo es captar la señal de la emisora de una forma adecuada.
+        para ello siga esta metodología \begin{enumerate}       
 %% simulación modeler
-\item Ejecute el programa {\tt yagui-modeler} descomprimiendo el archivo {\tt yagi-modeler.tar.gz} que se encuentra en la plataforma; abra {\tt index.html} y presione el botón de {\em Click Here for the Yagi Modeler}
+        \item Ejecute el programa {\tt yagui-modeler} descomprimiendo el
+            archivo {\tt yagi-modeler.tar.gz} que se encuentra en la
+            plataforma; abra {\tt index.html} y presione el botón de {\em
+            Click Here for the Yagi Modeler}. Si tiene problemas con la
+            seguiridad de Java, cambie esta configuración.
 
 %% simulación modeler
-\item  En el menú {\tt examples} escoja un diseño del tipo {\tt K1FO 70 cm}, procurando quecada grupo implemente una antena diferente. (\sout{directividad proporcional a la nota}), adapte este diseño para que trabaje a 2.4 GHz siguiendo los pasos descritos en "{\em This applet can be used to scale the example yagis or any others to new frequencies}. 
+        \item  En el menú {\tt examples} escoja un diseño del tipo {\tt
+            K1FO 70 cm}, procurando quecada grupo implemente una antena
+            diferente. 
+            adapte este diseño para que trabaje a la frecuencia portadora
+            de su emisora siguiendo los pasos descritos en "{\em This
+            applet can be used to scale the example yagis or any others to
+        new frequencies}. 
 
 %% simulación modeler
-\item Seleccionando el ejemplo deseado trabajar sobre él, en este recuadro nos permite ajustar la frecuencia  a trabajar y el diámetro del alambre a utilizar. Busque calibre de cables estaunidense, (\url{http://es.wikipedia.org/wiki/Calibre_de_alambre_estadounidense}) este será de gran ayuda para la selección del alambre deseado. También pueden observar impedancia y ganacias.
+        \item Seleccionando el ejemplo deseado trabajar sobre él, en éste
+            recuadro nos permite ajustar la frecuencia  a trabajar y el
+            diámetro del tubo a utilizar. También pueden observar
+            impedancia y ganacias.
 
 %% simulacion
-\item Documente: ganancia, impedancia, patrón de radiación de la antena. También la longitud y posición de cada elemento.
-%% analizar
-\item Dibuje y simule esta misma antena con {\tt xnec2c}. Comparar los diseños de las antenas basándose en los resultados de la simulación tener en cuenta patrón de radiación, potencias, ganancias, impedancias etc. Describa fortalezas y debilidades de cada una de las herramientas.
+        \item Documente: ganancia, impedancia, patrón de radiación de la
+            antena.  También la longitud y posición de cada elemento.
+
+    \end{enumerate}
+    y consulte lo siguientes parámetros de su emisora para hacer un
+    estimativo de la potencia recibida por nuestra antena.
+
+    \begin{enumerate}
+        \item Ubicación geográfica de los transmisores
+        \item potencia de transmisión 
+        \item Escoja una posible antena que utilice el transmisor (consulte
+            antenas típicas de un transmisor de FM)
+        \item Con la localización geográfica de Fusagasugá trate de
+            consultar o calcular
+            el ángulo al cual habría que apuntar la antena para una
+            recepción óptima.
+    \end{enumerate}
+%% simulación Xnec2c
+   
+\item Dibuje y simule esta misma antena con {\tt xnec2c}. Comparar los
+    diseños de las antenas basándose en los resultados de la simulación
+    tener en cuenta patrón de radiación, potencias, ganancias, impedancias
+    etc. Describa fortalezas y debilidades de cada una de las
+    herramientas.
+
 
 
 %% implementar
-\item  Implementar  antena Yagi. Tenga en cuenta la lista de materiales suministrada por el programa con los tamaños distancias, calibre del cable y material. Seleccione un buen soporte (no conductor) para los elementos de la Yagi  
+\item  Implementar  antena Yagi. Tenga en cuenta la lista de materiales
+    suministrada por el programa con los tamaños distancias y material.
+    Seleccione un buen soporte (no conductor) para los elementos de la
+    Yagi. Haga pruebas de su emisora, evalúe el ancho de banda de la antena
+    sintonizando emisoras en todo el dial.
 
 %% implementar
-\item verifique su funcionamiento tal como lo hizo con el dipolo. En una conexión compare el monopolo que viene con la tarjeta de red, el dipolo y la yagui mediane la orden {\tt iwconfig} que nos suministra la potencia de la señal recibida. 
+\item Según la implementación hecha y las simulaciones aclare las
+    siguientes cuestiones: cuál es el ancho de banda de la antena; según el
+    cable utilizado cuál será el coeficiente de reflexión; comparelo con lo
+    obtenido en xnec2c si no coinciden corrija la simulación;
+    si existiera
+    línea de vista entre el transmisor y el receptor cuál sería la potencia
+    y el voltaje recibidos.
 
 
 %Los parámetros de diseño empleados para esta antena son: frecuencia 2.4GHz, dipolo $\lambda/2$, reflectores y directores (seleccionarlos a su criterio)
@@ -283,18 +332,14 @@ Conclusiones(15\%)&claras, concisas y relevantes&Falta especificar resultados&Ir
 
 \begin{itemize}\itemsep=-4pt
   \item Meserve, Martin E. VHF/UHF Yagi Antenna Feed Design.\url{http://www.k7mem.com/Electronic_Notebook/antennas/yagi_vhf_feed.html}
-  \item Biotele. Easy to Build WIFI 2.4GHz Yagi Antenna \url{http://www.instructables.com/id/Easy-to-Build-WIFI-24GHz-Yagi-Antenna/}
   \item Xnec2c User Manual.\url{http://www.qsl.net/5b4az/pkg/nec2/xnec2c/doc/xnec2c.html }
   \item Antena Yagi
 Networks.\url{http://arieldx.tripod.com/estaciondx/proyectos/yagifm.htm}
 \item Schmidt, Kevin. Software YagiModel.\url {http://fermi.la.asu.edu/w9cf/yagipub/}
- %% \item \url{http://tf.nist.gov/general/pdf/451.pdf} \url{http://www.researchgate.net/post/Regarding_Yagi-Uda_antenna}
+\item \url{http://tf.nist.gov/general/pdf/451.pdf} \url{http://www.researchgate.net/post/Regarding_Yagi-Uda_antenna}
  
 \end{itemize}
 }
-
-
-
 
 
 \end{document} 
