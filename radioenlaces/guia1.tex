@@ -1,0 +1,279 @@
+\documentclass[onecolumn]{article}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+%\usepackage{graphicx}
+%\usepackage[dvips]{graphicx}
+
+\usepackage{verbatim}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc} %tildes
+
+\usepackage[all]{xy}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{lscape}
+\usepackage{amsthm}
+\usepackage[mathscr]{euscript}
+
+\usepackage{fancyhdr}
+\usepackage{multirow}
+%\usepackage{booktabs}
+\usepackage{framed}
+
+\usepackage{tikz}
+
+
+\usepackage{layout}
+\setlength{\hoffset} {0cm}        % 1
+\setlength{\voffset} {0cm}        % 2
+\setlength{\oddsidemargin}{0cm}   % 3
+\setlength{\evensidemargin}{0cm}  % 4
+\setlength{\topmargin}{1cm}       % 5
+\setlength{\headheight}{4cm}      % 6
+\setlength{\headsep}{1cm}         % 7
+\setlength{\textwidth}{17cm}      % 8
+\setlength{\textheight}{17cm}     % 9
+\setlength{\marginparsep}{0cm}    % 10
+\setlength{\marginparwidth}{0cm}  % 11
+\setlength{\footskip}{0cm}        % 12
+
+
+%%% Definiciones para su Guía de laboratorio%%%
+\newcommand{\profesor}{Leonardo Rodríguez Mújica}
+\newcommand{\correo}{lrodriguez@mail.unicundi.edu.co}
+\newcommand{\nucleotematico}{Radioenlaces}
+\newcommand{\codigo}{}
+\newcommand{\monitor}{Andrea Carolina Garay Mosquera}
+\newcommand{\cormon}{a.cgaray@hotmail.com}
+
+\begin{comment}
+\newcommand{\marco}[2]
+{
+\begin{center}
+{\fboxsep 10pt
+\fcolorbox{black}{white}{
+\begin{minipage}[t]{16cm}
+
+\section{#1}
+#2
+\end{minipage}
+}}
+\end{center}
+}
+\end{comment}
+
+\newcommand{\marco}[2]
+{
+\begin{framed}
+\section{#1}
+#2
+
+\end{framed}
+
+}
+\newcommand{\objetivos}[1] { \marco{Objetivos}{#1} }
+\newcommand{\materiales}[1] { \marco{Materiales sugeridos}{#1} }
+\newcommand{\planteamiento}[1] { \marco{Planteamientos y procedimiento}{#1} }
+\newcommand{\metodologia}[1] { \marco{Metodología y evaluación}{#1} }
+\newcommand{\recomendaciones}[1] { \marco{Recomendaciones}{#1} }
+\newcommand{\bibliografia}[1] { \marco{Bibliografia}{#1} }
+
+%%% Digitado por el usuario {\tt }
+%%% Click en alguna parte {\sl }
+%%% inglés {\em }
+
+\cfoot{
+Diagonal 18 No 20-29  Fusagasugá- Cundinamarca Teléfonos: 8732512/35 - Fax \\
+Página Web: \href{www.unicundi.edu.co}{
+www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co}{unicundi@unicundi.edu.co}
+}
+
+\fancyhead{
+\begin{tabular}{|c|c|c|c|}
+\hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \hspace{3cm}  & \hspace{8cm}                        & \hspace{2cm}    & \hspace{2cm}     \\
+                & \textbf{UNIVERSIDAD DE CUNDINAMARCA}  & FECHA DE          &  CÓDIGO            \\
+                & \textbf{FACULTAD DE INGENIERÍA}       & EMISIÓN           &                    \\
+                & \textbf{INGENIERÍA ELECTRÓNICA}       &                   &                    \\
+                &                                       &  \date{\today}    &                    \\ \cline{2-4}
+                &                                       &                   &                    \\
+                & \textbf{GUÍA DE LABORATORIO  }        & VERSION No.1.1    &  PÁGINA \thepage   \\
+                &                                       &                   &                    \\
+  \hline
+\end{tabular}
+}
+
+\fancyhead[L]{
+\hspace{0.4cm}
+\vspace{0.4cm}
+\includegraphics[scale=0.12]{logo.eps}
+}
+
+\title{\textbf{FORMATO GUÍA DE LABORATORIO \\ UNIVERSIDAD DE CUNDINAMARCA \\ FACULTAD DE INGENIERÍA \\ PROGRAMA INGENIERÍA ELECTRÓNICA}}
+\author{\textbf{Jose David Alvarado Moreno} \\ \\ \huge{\textbf{\LaTeX}}}
+\date{\today}
+
+\begin{document}
+
+\pagestyle{fancy}
+
+%%\maketitle
+
+\begin{center}
+\begin{tabular}{|l l|l l|}
+\hline
+\multirow{2}{*}{Asignatura:} &\multirow{2}{*}{\textbf{\nucleotematico}}  & \multirow{2}{*}{Código:}  & \multirow{2}{*}{\codigo}  \\
+                             &                                         &                          &                    \\ \hline
+\multirow{2}{*}{Docente:}    &\multirow{2}{*}{\textbf{\profesor}}   & \multirow{2}{*}{E-mail:} & \multirow{2}{*}{\href{mailto:\correo}{\correo}}  \\
+                             &                                         &                          &                     \\ \hline
+\multirow{2}{*}{Monitor:}    &\multirow{2}{*}{\textbf{\monitor}} & \multirow{2}{*}{E-mail:} & \multirow{2}{*}{\href{mailto:\cormon}{\cormon}}   \\
+                             &\hspace{6cm}                             &                          & \hspace{6cm}        \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\section*{PRACTICA Nº 1}
+\addcontentsline{toc}{section}{PRACTICA Nº 1}
+
+\section*{Manejo estación base Rocket M5}
+\addcontentsline{toc}{section}{Manejo estación base Rocket M5}
+\end{center}
+
+%%%--- Colocar objetivos acá ----%%%%
+\objetivos{
+
+\begin{itemize}
+\item  Familiarizarse con la instalación de la estación base
+\item  Familiarizarse con el sistema operativo airOS
+\item  Establecer una contexión punto a punto entre los dos PC
+\end{itemize}
+}
+
+%%%----- Listar los materiales acá ------%%%
+\materiales{
+
+\begin{enumerate}
+  \item 2 estaciones base Rocket M5
+  \item 4 cables UTP
+  \item 2 PC
+\end{enumerate}
+}
+
+
+%%% ------- colocar planteamiento y procedimiento
+\planteamiento{
+\begin{enumerate}
+
+%% Instalación estación base
+\item Conecte la estación base al computador tal como indica el manual
+
+%% instalación
+\item Enciendalo y verifique que halla conexión tal vez haciendo {\tt ping} a
+{\tt 192.168.0.20}. Para ello debe configurar una IP estática a la tarjeta
+Ethernet del PC que pertenezca a la misma red.
+
+%% airOS
+\item Con un navegador ingrese a esta IP e identifíquese: {\tt user: ubnt} y
+{\tt password: ubnt}. Explore el airOS navegando por las diferentes pestañas.
+
+%% airOS
+
+\item En la tarjeta {\sl Network} del airOS, cambie las direcciones IP de las
+dos estaciones base a una red diferente de la que trae por omisión la estación
+base. Para que se pueda comunicar debe cambiar también la dirección IP del PC.
+Antes de salir de cada tarjeta no olvide guardar, presionando {\em change} y luego ...
+
+%% airOS
+\item En la tarjeta {\sl Wireless} cambie el {\tt ssid} en las dos estaciones.
+Configure una en modo {\em Access Point} y el otro como {\em Station}. No le
+coloque ninguna seguridad. Una vez establecida la conexión (vea la intensidad
+de la señal en los leds de la estación base) haga {\tt ping} desde {\tt Tools}
+a la estación base vecina.
+
+%% conexión
+\item Compruebe la conexión entre los dos PC (cada uno conectado a una estación
+base) mediante {\tt ping}
+
+%%i airOS
+\item Una vez culminadas las pruebas debe realizar un {\em reset} por software
+esto se lleva a cabo en la tarjeta de {\em System} en {\em Reset to Factory
+Defaults}
+
+\end{enumerate}
+}
+
+%%% --- Colocar acá la metodología y evaluación
+\metodologia{
+
+Presentar un informe con los resultados obtenidos en la práctica que se
+evaluará teniendo en cuenta la siguiente rúbrica.
+
+\vspace{0.5cm}
+
+\newcommand{\med}{0.22}
+\begin{tabular}{|p{\med\textwidth}|p{\med\textwidth}|p{\med\textwidth}|p{\med\textwidth}|}
+\hline
+{\bf 	Criterio/Valoración} &{\bf Excelente~~(90\%)} &{\bf Regular~~(50\%)} &{\bf Deficiente~~(5\%)}\\
+\hline
+Instalación de la estación base(25\%)&Documentación de la instalación clara
+y concisa&&No documentó la instalación\\
+\hline
+Sistema operativo airOS (25\%)&Realizó todas las tareas con el airOS&&no configuró la estación base\\
+\hline
+Conexión punto a punto entre los dos PC (25\%)&Prueba la conexión entre
+todos los nodos de la red&&No documento la conexión
+entre PC\\
+\hline
+Forma:presentación, redacción ortografía (10\%)&Sin errores y bien
+presentado&&Presenta deficiencias\\
+\hline
+Conclusiones(15\%)&claras, concisas y relevantes&&Irrelevantes e intrasendentes\\
+\hline
+\end{tabular}
+}
+
+
+%%% --- colocar acá las recomendaciones ---%%%
+\recomendaciones{
+
+\begin{itemize}
+
+\item Asegurarse de hacerle el {\em reset} por software al equipo, cuando
+culminen la práctica, para que se pueda utilizar sin inconvenientes los
+estudiantes que continúen
+
+\item Los equipos se entregan y tienen 24 horas para realizar la
+práctica, una vez culminado su tiempo deben pasarlos al siguiente grupo
+en la lista
+
+
+\item No utilizar el botón de {\em reset} del equipo.
+
+\item La red con que trabajarán sus equipos y el nombre del {\tt ssid} debe conservarlos todas las prácticas.
+
+\end{itemize}
+}
+
+
+%%% ---- listar las referencia bibliográficas
+\bibliografia{
+
+\begin{itemize}
+  \item airOS User Guide. Ubiquiti.
+Networks.\url{http://dl.ubnt.com/guides/airOS/airOS_UG.pdf} 
+\end{itemize}
+}
+
+
+
+
+
+
+\end{document} 
