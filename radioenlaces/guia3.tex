@@ -128,27 +128,6 @@ www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co}
 %%\maketitle
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% segundo laboratorio %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-\setcounter{section}{0}
-
-\begin{center}
-\begin{tabular}{|l l|l l|}
-\hline
-\multirow{2}{*}{Asignatura:} &\multirow{2}{*}{\textbf{\nucleotematico}}  & \multirow{2}{*}{Código:}  & \multirow{2}{*}{\codigo}  \\
-                             &                                         &                          &                    \\ \hline
-\multirow{2}{*}{Docente:}    &\multirow{2}{*}{\textbf{\profesor}}   & \multirow{2}{*}{E-mail:} & \multirow{2}{*}{\href{mailto:\correo}{\correo}}  \\
-                             &                                         &                          &                     \\ \hline
-\multirow{2}{*}{Monitor:}    &\multirow{2}{*}{\textbf{\monitor}} & \multirow{2}{*}{E-mail:} & \multirow{2}{*}{\href{mailto:\cormon}{\cormon}}   \\
-                             &\hspace{6cm}                             &                          & \hspace{6cm}        \\ \hline
-\end{tabular}
-\end{center}
-
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Tercer laboratorio %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,11 +148,11 @@ www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co}
 \end{center}
 
 \begin{center}
-\section*{PRÁCTICA Nº 2}
-\addcontentsline{toc}{section}{PRÁCTICA Nº 2}
+\section*{PRÁCTICA Nº 3}
+\addcontentsline{toc}{section}{PRÁCTICA Nº 3}
 
 \section*{Enlace 1.5 km}
-\addcontentsline{toc}{section}{Enlace cortico}
+\addcontentsline{toc}{section}{Enlace 1.5 km}
 \end{center}
 
 %%%--- Colocar objetivos acá ----%%%%
@@ -181,17 +160,12 @@ www.unicundi.edu.co} - Correo Electrónico \href{mailto:unicundi@unicundi.edu.co}
 
 \begin{itemize}
 
-\item Utilizar software de diseño de radioenlaces
-
-\item  Familiarizarse con el sistema operativo y Linux usando
-herramientas desde la línea de órdenes.
-
-\item  Familiarizarse con la conexión e instalación de una antena.
+\item Configurar la Rocket M5 a través de la consola.
 
 \item  Establecer una contexión punto a punto a una distancia mayor de 1.5
     km.
 
-\item Proveer un servicio sobre el enlace inalámbrico.  
+\item Proveer un servicio de {\tt wiki} sobre el enlace inalámbrico.  
 
 \item Suministrar acceso a Internet a los equipos que estén conectados al
     radioenlace punto a punto.
@@ -218,80 +192,43 @@ herramientas desde la línea de órdenes.
 
 %%%% Utilizar software de diseño de radioenlaces
 \item Dias antes de la entrega de los equipos tome las coordenadas de los
-dos puntos donde va a hacer el radioenlace: terraza bloque F y otro ubicado
+dos puntos donde va a hacer el radioenlace: uno en la terraza del bloque E o F y otro ubicado
 como mínimo a 1.5 km  que tenga línea de vista y que halla posibilidad de
-alimentación. 
+alimentación. Verifique el radioenlace en Radiomobile.
 
-%%%% Utilizar software de diseño de radioenlaces
-\item Con las coordenadas ubique los dos nodos en Radio Mobile, configure
-los equpos con que se va a trabajar en {\bf propiedades de las redes}
-tarjeta {\bf Sistemas}. Consiga las especificaciones técnicas de la
-antenas y de la estación base para poder llenar el formulario.
+%% Configurar la rocket consola
+\item Administre la Rocket mediante una conexión ssh y realice las siguientes tareas:
+Asígnele la dirección ip desde la consola, configure el modo de trabajo (estación o punto de acceso), guarde la configuración.
 
-%%%% Utilizar software de diseño de radioenlaces
-\item  En la {\bf propiedades de la redes} tarjeta {\bf miembros} añada los
-dos nodos a la red y en {\bf enlace de radio} vea el radioenlace, tenga en
-cuenta los siguientes datos que nos suministra: 
-ángulo de azimuth, 
-ángulo de elevación, 
-distancia entre los nodos, 
-Nivel de la señal recibida en cada nodo
+%%% familiarizarse linux 
+\item Instale Apache pruebe el servidor y 
 
-%%% 
-\item 
+%% wiki
+\item Sobre Apache instale una herramienta wiki, cada grupo debe instalar uno diferente, ejemplos de ellos verlos en: \url{https://en.wikipedia.org/wiki/Comparison_of_wiki_software}, debe cumplir con que tenga una licencia no propietaria.
+y cree unos documentos wiki, con el informe de la primera y segunda práctica de laboratorio
+
+\item Con el PC que está en la universidad configurelo para que se pueda acceder a Internet desde el PC del otro extremo del radioenlace y pueda consultar y modificar el wiki remotamente
+
 
 
 % Familiarizarse con el sistema operativo airOS (Linux) desde la línea de órdenes
-
-\item Conecte la estación base al computador tal como indica el manual y
-como lo hizo en la práctica anterior. Pero ahora no se conecte con Windows
-sino con Linux.
-
-%\item Conecte la estación base al computador tal como indica el manual y
-%como lo hizo en la práctica anterior. Pero ahora no se conecte a través de
-%HTTP sino de SSH, instalelo ({\tt apt-get install ssh}) y digitar la orden:
-
-%{\tt \$ ssh 192.162.0.20 }
-
-%Auténtíquese en la máquina y explore su disco con las órdenes {\tt ls},
-%{\tt cd}, 
-%{\tt df}, 
-%{\tt du}, 
-%{\tt cat} etc 
-
-% Familiarizarse con el sistema operativo airOS (Linux) desde la línea de órdenes
-%\item Cambie la dirección IP de la estación base a la misma de la práctica pasada
-%pero a través de la consola mediante las órdenes {\tt ip} o {\tt ifconfig},
-%haga lo propio con su PC Linux con las mismas órdenes. Verifique que halla
-%conexión
-
-% Familiarizarse con el sistema operativo airOS (Linux) desde la línea de órdenes
-%\item  Cambie el {\tt ssid} desde la línea de órdenes con {\tt iwconfig},
-%consulte su sintaxis y coloque el modo de trabajo como {\em Station} o como
-%{\em Access Point} también con la orden {\tt iwconfig}. Desde su máquina
-%Linux puede consultar el manual con la orden {\tt man iwconfig}
+\item  Cambie el {\tt ssid} desde la línea de órdenes con {\tt iwconfig},
+consulte su sintaxis y coloque el modo de trabajo como {\em Station} o como
+{\em Access Point} también con la orden {\tt iwconfig}. Desde su máquina
+Linux puede consultar el manual con la orden {\tt man iwconfig}
 
 
 % Familiarizarse con el sistema operativo airOS (Linux) desde la línea de órdenes
-%\item No existe documentación oficial de cómo guardar las configuraciones hechas,
-%buscar  cómo hacerlo
+\item No existe documentación oficial de cómo guardar las configuraciones hechas,
+buscar  cómo hacerlo
 
 
 %% conexión
 %\item Compruebe la conexión entre los dos PC (cada uno conectado a una
 %estación base) mediante {\tt ping}. Guarde su trabajo
 
-%%% Familiarizarse con la conexión e instalación de una antena
-\item Súbase a la terraza del bloque F, instale la antena, conecte el
-equipo. en el otro extremo conecte la rocket M5 
 
 %%% Familiarizarse con la conexión e instalación de una antena
-\item Establezca la conexión  entre los equipos. Vea la potencia recibida,
-la distancia calculada por el airOS. Comparelas con la  calculada y la
-suministrada por Radio Mobile. Consulte cómo calcular  la velocidad de la conexión con base
-en los {\tt ping} que realice entre los extremos. Comparelo con la suministrada
-en el monitor (throughput: gráfico de bits por segundo vs tiempo) tarjeta {\bf main}
-%% airOS
 \item Una vez culminadas las pruebas debe realizar un {\em reset} por
 software esto se lleva a cabo en la tarjeta de {\em System} en {\em Reset to
 Factory Defaults}
@@ -301,7 +238,7 @@ Factory Defaults}
 
 %%% --- Colocar acá la metodología y evaluación
 \metodologia{
-NO Presentar un informe con los resultados obtenidos en la práctica que se
+Presentar un informe con los resultados obtenidos en la práctica que se
 evaluará teniendo en cuenta la siguiente rúbrica.
 
 \vspace{1cm}
@@ -312,16 +249,14 @@ evaluará teniendo en cuenta la siguiente rúbrica.
 Criterio&Excelente(90\%)&Bueno(80\%)&Regular(50\%)&Deficiente(5\%)\\
 
 \hline
-Software de diseño(25\%)&Lo utilizó de forma apropiada&&&Lo utilizó
+Consola SSH(20\%)&Lo utilizó de forma apropiada&&&Lo utilizó
 inadecuadamente\\
 \hline
-Modelos de propagación(25\%)&Utilizó y valoró los modelos
-adecuadamente&&&No utilizó los modelos de forma adecuada\\
+Conexion punto a punto(20\%)&La realizó adecuadamente&&&No se pudo establecer conexión\\
 \hline
-Sistema operativo Linux (25\%)&Realizó todas las tareas pedidas en
-Linux&&&no configuró la estación base con Linux\\
+Apache y servicio wiki (20\%)&instaló, configuró y creó wikis adecuadamente&&&no instaló y no creó wikis\\
 \hline
-Conexión punto a punto entre los dos PC (25\%)&Prueba la conexión entre
+Acceso a Internet (20\%)&Prueba la conexión entre
 todos los nodos de la red&&&No documento la conexión
 entre PC\\
 \hline
@@ -354,6 +289,7 @@ práctica, una vez culminado su tiempo deben pasarlos al siguiente grupo
   \item airOS User Guide. Ubiquiti.
 Networks.\url{http://dl.ubnt.com/guides/airOS/airOS_UG.pdf} 
 \item man ip, man ifconfig, Debian  the administrator's Handbook. \url{http://debian-handbook.info/download/es-ES/squeeze/debian-handbook.pdf}
+\item \url{https://community.ubnt.com/t5/airOS-Software-Configuration/Is-there-a-Manual-on-the-Radios-command-line/td-p/402835}, \url{http://gregsowell.com/?p=3457}.
 
 \end{itemize}
 }
