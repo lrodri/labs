@@ -197,30 +197,44 @@ como mínimo a 1.5 km  que tenga línea de vista y que halla posibilidad de
 alimentación. Verifique el radioenlace en Radiomobile.
 
 %% Configurar la rocket consola
-\item Administre la Rocket mediante una conexión ssh y realice las siguientes tareas:
+\item Administre la Rocket mediante una conexión {\tt ssh} y realice las siguientes tareas:
 Asígnele la dirección ip desde la consola, configure el modo de trabajo (estación o punto de acceso), guarde la configuración.
-
-%%% familiarizarse linux 
-\item Instale Apache pruebe el servidor y 
-
-%% wiki
-\item Sobre Apache instale una herramienta wiki, cada grupo debe instalar uno diferente, ejemplos de ellos verlos en: \url{https://en.wikipedia.org/wiki/Comparison_of_wiki_software}, debe cumplir con que tenga una licencia no propietaria.
-y cree unos documentos wiki, con el informe de la primera y segunda práctica de laboratorio
-
-\item Con el PC que está en la universidad configurelo para que se pueda acceder a Internet desde el PC del otro extremo del radioenlace y pueda consultar y modificar el wiki remotamente
-
-
 
 % Familiarizarse con el sistema operativo airOS (Linux) desde la línea de órdenes
 \item  Cambie el {\tt ssid} desde la línea de órdenes con {\tt iwconfig},
 consulte su sintaxis y coloque el modo de trabajo como {\em Station} o como
-{\em Access Point} también con la orden {\tt iwconfig}. Desde su máquina
+{\em Access Point} con la misma orden. Desde su máquina
 Linux puede consultar el manual con la orden {\tt man iwconfig}
 
 
 % Familiarizarse con el sistema operativo airOS (Linux) desde la línea de órdenes
 \item No existe documentación oficial de cómo guardar las configuraciones hechas,
 buscar  cómo hacerlo
+
+
+%%% familiarizarse linux 
+\item Instale el servidor HTTP Apache en su máquina Linux,  pruebe el servidor iniciandolo, conomunicandose con él, deteniéndole y 
+
+%% wiki
+\item Sobre Apache instale una herramienta wiki, cada grupo debe instalar uno
+diferente, ejemplos de ellos verlos en:
+\url{https://en.wikipedia.org/wiki/Comparison_of_wiki_software}.  y cree unos
+documentos wiki, por ejemplo, con los informes de la primera y segunda práctica de
+laboratorio
+
+%% Configurar la rocket consola
+\item De una forma parecida a la que administra el servidor Apache lo puede
+hacer en la Rocket, apague y prenda los servicios {\tt http} y {\tt ssh} desde
+la consola, documente cada una de las órdenes que utilizó tanto en Linux como
+en la Rocket
+
+%% Acceso a iinternet
+\item Con el PC que está en la universidad configurelo para que se pueda
+acceder a Internet desde el PC del otro extremo del radioenlace y pueda
+consultar y modificar el wiki remotamente. Tenga en cuenta que para facilitar las cosas, debe
+detener el servicio {\tt network-manager}, que es el servicio que controla las
+interfaces de red y se administra desde la barra de tareas.
+
 
 
 %% conexión
