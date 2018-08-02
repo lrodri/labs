@@ -1,10 +1,10 @@
 labs
 ====
 
-# Mis Pŕacticas de laboratorio
+# Prácticas de laboratorio
 
-*  antenas, 
-* radioenlaces, 
-* electrónica 
+* Antenas, 
+* Radioenlaces, 
+* eElectrónica 
 
 etc.
